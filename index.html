@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawaiscans | Farewell</title>
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400&display=swap');
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            /* Changed to min-height to allow scrolling on small screens if text is long */
+            min-height: 100vh;
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* A deep, sad radial gradient */
+            background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
+            color: #e0e0e0;
+            font-family: 'Poppins', sans-serif;
+            /* Prevents horizontal scrollbar */
+            overflow-x: hidden; 
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 90%; /* Take up 90% of screen width on mobile */
+            padding: 40px;
+            border-radius: 15px;
+            /* Glassmorphism effect */
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            
+            /* Ensure margin for scrolling on small screens */
+            margin: 20px 0;
+
+            /* Animation */
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        h1.title {
+            font-family: 'Cinzel', serif;
+            /* Responsive font size */
+            font-size: clamp(2rem, 5vw, 3rem); 
+            margin-bottom: 5px;
+            margin-top: 0;
+            color: #fff;
+            letter-spacing: 4px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            line-height: 1.2;
+        }
+
+        .dates {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(0.7rem, 2vw, 0.9rem);
+            color: #888;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #333;
+            display: inline-block;
+            padding-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        p.message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .highlight {
+            color: #fff;
+            font-weight: 400;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- MOBILE SPECIFIC ADJUSTMENTS --- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 20px; /* Reduced padding for more screen space */
+                width: 85%;
+            }
+
+            h1.title {
+                letter-spacing: 2px; /* Reduce spacing so it doesn't break lines weirdly */
+            }
+
+            p.message {
+                font-size: 0.95rem; /* Slightly smaller text for mobile readability */
+                line-height: 1.6;
+                margin-bottom: 15px;
+            }
+
+            .dates {
+                margin-bottom: 25px;
+            }
+
+            .footer {
+                margin-top: 30px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Very small screens (iPhone SE, Foldable cover screens) */
+        @media (max-width: 350px) {
+            h1.title {
+                font-size: 1.8rem;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">KAWAISCANS</h1>
+        <div class="dates">SEPT 26, 2025 — FEB 1, 2026</div>
+
+        <p class="message">
+            Hey guys. Thank you for visiting us.
+        </p>
+        <p class="message">
+            It is with a heavy heart that we announce <span class="highlight">Kawaiscans</span> has shut down due to personal circumstances. 
+        </p>
+        <p class="message">
+            Our journey began in September 2025 and reached its final destination in February 2026. It was a wonderful experience working in the scanlation field with all of you.
+        </p>
+        
+        <div class="footer">
+            Sayonara.
+        </div>
+    </div>
+
+</body>
+</html>
